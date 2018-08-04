@@ -96,8 +96,14 @@ end
 
 def play(board)
 
-  9.times do
+  until over?(board)
     turn(board)
   end
+
+  if won?(board)
+    puts "Congradulations #{winner(board)}!"
+    
+
+  
 
 end
